@@ -1,7 +1,13 @@
+using Final_Project.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddDbContext<AnimeContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("AnimeContext")));
+
 
 var app = builder.Build();
 
