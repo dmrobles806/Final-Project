@@ -59,13 +59,19 @@
     {
         prevDisabled = "disabled";
     }
+    var nextDisabled="";
+    if  (Model.PageNum >= 3)
+    {
+        nextDisabled = "disabled";
+    }
 }
+
 <nav aria-label="Page navigation example">
   <ul class="pagination">
     <li class="page-item @prevDisabled">
 	<a class="page-link" asp-page="./Index" asp-route-PageNum="@(Model.PageNum - 1)">Previous</a>
     </li>
-    <li class="page-item">
+    <li class="page-item @nextDisabled">
 	<a class="page-link"asp-page="./Index" asp-route-PageNum="@(Model.PageNum + 1)">Next</a>
     </li>
   </ul>
