@@ -19,6 +19,15 @@ namespace Final_Project.Models
                 {
                     return;   
                 }
+                var Anime = new Anime
+                {
+                    Show = "Jujutsu Kaisen",
+                    Characters = new List<Character>
+                    {
+                        new Character {CharacterName = "Yuji Itadori", Strength = 10, Speed = 10, SpecialAbility = "Black Flash"},
+                        
+                    }
+                }
                 context.Anime.AddRange(
                     new Anime {
                         Show = "Jujustu Kaisen",
