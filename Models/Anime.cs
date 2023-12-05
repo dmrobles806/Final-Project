@@ -9,7 +9,7 @@ namespace Final_Project.Models
 
         public string Show {get; set;} = string.Empty;
 
-        public string Character {get; set;} = string.Empty;
+        public string CharacterName {get; set;} = string.Empty;
 
         public List<Character> Characters {get; set;} = default!;
 
