@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Final_Project.Migrations
 {
     [DbContext(typeof(AnimeContext))]
-    [Migration("20231204202754_InitialCreate")]
+    [Migration("20231205010713_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -25,7 +25,7 @@ namespace Final_Project.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Character")
+                    b.Property<string>("CharacterName")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
@@ -46,6 +46,10 @@ namespace Final_Project.Migrations
 
                     b.Property<int>("AnimeID")
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("CharacterName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("SpecialAbility")
                         .IsRequired()

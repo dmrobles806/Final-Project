@@ -17,7 +17,7 @@ namespace Final_Project.Migrations
                     AnimeID = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Show = table.Column<string>(type: "TEXT", nullable: false),
-                    Character = table.Column<string>(type: "TEXT", nullable: false)
+                    CharacterName = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -30,6 +30,7 @@ namespace Final_Project.Migrations
                 {
                     CharacterID = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
+                    CharacterName = table.Column<string>(type: "TEXT", nullable: false),
                     Strength = table.Column<int>(type: "INTEGER", nullable: false),
                     Speed = table.Column<int>(type: "INTEGER", nullable: false),
                     SpecialAbility = table.Column<string>(type: "TEXT", nullable: false),
