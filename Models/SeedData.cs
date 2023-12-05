@@ -25,53 +25,15 @@ namespace Final_Project.Models
                     Characters = new List<Character>
                     {
                         new Character {CharacterName = "Yuji Itadori", Strength = 10, Speed = 10, SpecialAbility = "Black Flash"},
-                        
+                        new Character {CharacterName = "Megumi Fushiguro", Strength = 4, Speed = 5, SpecialAbility = "Ten Shadows"},
+                        new Character {CharacterName = "NObara Kugisaki", Strength = 2, Speed = 2, SpecialAbility = "Resonance"},
+                        new Character {CharacterName = "Aoi Todo", Strength = 10, Speed = 9, SpecialAbility = "Boogie Woogie"},
+                        new Character {CharacterName = "Kento Nanami", Strength = 7, Speed = 8, SpecialAbility = "Ratio"},
+                        new Character {CharacterName = "Ryomen Sukuna", Strength = 10, Speed = 10, SpecialAbility = "Molevanant Shrine"},
                     }
-                }
-                context.Anime.AddRange(
-                    new Anime {
-                        Show = "Jujustu Kaisen",
-                        Character = "Yuji Itadori",
-                        Characters = new List<Character> {
-                            new Character {Strength = 10, Speed = 10, SpecialAbility = "Black Flash"}
-                        }
-                    },
-                    new Anime {
-                        Show = "Jujustu Kaisen",
-                        Character = "Megumi Fushiguro",
-                        Characters = new List<Character> {
-                            new Character {Strength = 4, Speed = 5, SpecialAbility = "Ten Shadows"}
-                        }
-                    },
-                    new Anime {
-                        Show = "Jujutsu Kaisen",
-                        Character = "Nobara Kugisaki",
-                        Characters = new List<Character> {
-                            new Character {Strength = 2, Speed = 2, SpecialAbility = "Resonance"}
-                        }
-                    },
-                    new Anime {
-                        Show = "Jujutsu Kaisen",
-                        Character = "Aoi Todo",
-                        Characters = new List<Character> {
-                            new Character {Strength = 10, Speed = 9, SpecialAbility = "Boogie Woogie"}
-                        }
-                    },
-                    new Anime {
-                        Show = "Jujutsu Kaisen",
-                        Character = "Kento Nanami",
-                        Characters = new List<Character> {
-                            new Character {Strength = 7, Speed = 8, SpecialAbility = "Ratio"}
-                        }
-                    },
-                    new Anime {
-                        Show = "Jujutsu Kaisen",
-                        Character = "Ryomen Sukuna",
-                        Characters = new List<Character> {
-                            new Character {Strength = 10, Speed = 10, SpecialAbility = "Molevanant Shrine"}
-                        }
-                    }
-                );
+                };
+
+                context.Anime.Add(Anime);
                 context.SaveChanges();
              }
         }
