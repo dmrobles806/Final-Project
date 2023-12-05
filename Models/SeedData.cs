@@ -26,7 +26,7 @@ namespace Final_Project.Models
                     {
                         new Character {CharacterName = "Yuji Itadori", Strength = 10, Speed = 10, SpecialAbility = "Black Flash"},
                         new Character {CharacterName = "Megumi Fushiguro", Strength = 4, Speed = 5, SpecialAbility = "Ten Shadows"},
-                        new Character {CharacterName = "NObara Kugisaki", Strength = 2, Speed = 2, SpecialAbility = "Resonance"},
+                        new Character {CharacterName = "Nobara Kugisaki", Strength = 2, Speed = 2, SpecialAbility = "Resonance"},
                         new Character {CharacterName = "Aoi Todo", Strength = 10, Speed = 9, SpecialAbility = "Boogie Woogie"},
                         new Character {CharacterName = "Kento Nanami", Strength = 7, Speed = 8, SpecialAbility = "Ratio"},
                         new Character {CharacterName = "Ryomen Sukuna", Strength = 10, Speed = 10, SpecialAbility = "Molevanant Shrine"},
