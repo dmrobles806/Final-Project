@@ -20,11 +20,14 @@ namespace Final_Project.Pages_Characters
 
         public IList<Character> Character { get;set; } = default!;
 
+        public int PageNum {get; set;} = 1;
+        public int PageSize {get; set;} = 10;
+
         public async Task OnGetAsync()
         {
             if (_context.Character != null)
             {
-                Character = await _context.Character.ToListAsync();
+                Character = await _context.Character.Skip((PageNum-1)*PageSize).ToListAsync();
             }
         }
     }
