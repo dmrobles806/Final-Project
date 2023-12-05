@@ -1,0 +1,54 @@
+@page
+@model Final_Project.Pages_Characters.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Character[0].CharacterName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Character[0].Strength)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Character[0].Speed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Character[0].SpecialAbility)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Character) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CharacterName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Strength)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Speed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpecialAbility)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.CharacterID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.CharacterID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.CharacterID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
